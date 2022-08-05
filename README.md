@@ -14,6 +14,8 @@ I am also in the process of transitioning from using the fast.ai library to pure
 
 Ideology scores used are from Adam Bonica’s 2014 Paper “Mapping The Ideological Marketplace.” Rather than base ideology on votes once elected to Congress, which precludes having scores for any non-incumbents, Bonica’s “CF Score” is a metric based on the ideology of a candidate’s financial contributors. Using collaborative filtering, one can identify donors that tend to donate to candidates of certain ideologies, and infer the ideologies of candidates who receive money from the same donors.
 
+In addition to the partisan lean of each state (how much more Republican does it vote than the nation as a whole in a weighted combination of the last two presidential elections), I included the states themselves as categorical variables in my models, after ensuring that they were neither polluting the analysis nor an insignificant factor. I hypothesize that this is because some states, particularly small ones, can be quite politically idiosyncratic.
+
 When building my datasets, I exclude special elections, jungle primaries included in the source data, and Democrat vs Democrat or Republican vs Republican elections included in the source data that are the result of jungle primaries earlier in that year.
 
 [^1]: I use two-party vote share, in which I divide the votes for the Republican by (votes for Repub + votes for Democrat)
