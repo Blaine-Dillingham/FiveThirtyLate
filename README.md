@@ -16,4 +16,4 @@ Ideology scores used are from Adam Bonica’s 2014 Paper “Mapping The Ideologi
 
 When building my datasets, I exclude special elections, jungle primaries included in the source data, and Democrat vs Democrat or Republican vs Republican elections included in the source data that are the result of jungle primaries earlier in that year.
 
-[^1] I use two-party vote share, in which I divide the votes for the Republican by (votes for Repub + votes for Democrat)
+[^1]: I use two-party vote share, in which I divide the votes for the Republican by (votes for Repub + votes for Democrat)
