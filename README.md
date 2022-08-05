@@ -10,7 +10,7 @@ I am currently using model ensembling and data augmentation to improve the perfo
 
 I am also in the process of transitioning from using the fast.ai library to pure PyTorch to reduce the number of layers of abstraction in my code, as this will make for easier debugging. My next steps are to build a usable web application that constantly updates 
 
-Methodology Notes
+## Methodology Notes
 
 Ideology scores used are from Adam Bonica’s 2014 Paper “Mapping The Ideological Marketplace.” Rather than base ideology on votes once elected to Congress, which precludes having scores for any non-incumbents, Bonica’s “CF Score” is a metric based on the ideology of a candidate’s financial contributors. Using collaborative filtering, one can identify donors that tend to donate to candidates of certain ideologies, and infer the ideologies of candidates who receive money from the same donors.
 
