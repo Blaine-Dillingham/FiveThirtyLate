@@ -19,11 +19,29 @@ I hope to expand my model to US House elections before the midterms in November.
 
 ## Findings
 
-The partisan lean [^2] of the state in which each election took place appears to be by far the most important factor in my model's predictions.
+The partisan lean [^2] of the state in which each election took place appears to be by far the most important factor in my model's predictions, with the ideologies of each candidate coming in a distant 2nd and 3rd place. 
 
 <p align="center">
   <img width="700" src="https://user-images.githubusercontent.com/98286463/183303381-67197ace-3ec7-4448-977c-3c4b11d477ec.png">
 </p>
+
+Worth noting about ideology is the immense shift in the distribution of candidate CF Scores between training, validation, and test sets. The graphs below are, from left to right, the CF score of Democratic candidates in the training, validation, and test sets. This corresponds to the year ranges 2000-2010, 2012, and 2016-2020, respectively[^3].
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/98286463/183304232-9ba05bd6-0f47-4383-b82f-95aa5d0a7909.png" width="300" />
+  <img src="https://user-images.githubusercontent.com/98286463/183304269-45c59e94-8fb7-4489-9df5-0b6627f908b5.png" width = "300" />
+  <img src="https://user-images.githubusercontent.com/98286463/183304284-7d9185e4-3d51-4ee4-867b-6d493372a824.png" width = "300" /> 
+</p>
+
+And the Republican ideology distribution:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/98286463/183304357-d59bd55f-30bc-4377-a9ea-7dd42ca33134.png" width="300" />
+  <img src="https://user-images.githubusercontent.com/98286463/183304366-1308333a-28dd-4408-b21c-46ccaf77cc83.png" width = "300" />
+  <img src="https://user-images.githubusercontent.com/98286463/183304382-7d6f718b-549b-4f86-836c-b006a88167b0.png" width = "300" /> 
+</p>
+
+This distributional shift both explains some of the challenge my model has in generalizing as well as speaks to its strong ability to find fundamental relationships between candidate ideology and performance.
 
 ## Methodology Notes
 
@@ -34,4 +52,5 @@ In addition to the partisan lean [^2] of each state, I included the states thems
 When building my datasets, I exclude special elections, jungle primaries included in the source data, and Democrat vs Democrat or Republican vs Republican elections included in the source data that are the result of jungle primaries earlier in that year.
 
 [^1]: I use two-party vote share, in which I divide the votes for the Republican by (votes for Repub + votes for Democrat)
-[^2]: how much more Republican does it vote than the nation as a whole, in a weighted combination of the last two presidential elections
+[^2]: how much more Republican does the state vote than the nation as a whole, in a weighted combination of the last two presidential elections
+[^3]: the 3rd graph for each party graph exaggerates the number of candidates having the mode of ideologies because missing values are filled by using the mean ideology of that party in the 2016-2020 period
