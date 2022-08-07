@@ -15,14 +15,23 @@ I trained decision trees, random forests, and neural networks on Senate election
   <img src="https://user-images.githubusercontent.com/98286463/183139690-76597e33-0199-4b29-81ae-4b84d69cec5e.png" width = "200" /> 
 </p>                                                                                                                                
 
-I hope to expand my model to US House elections before the midterms in November. I am also in the process of transitioning from using the fast.ai library to pure PyTorch to reduce the number of layers of abstraction in my code, as this will make for easier debugging. My next steps are to build a usable web application that constantly updates 
+I hope to expand my model to US House elections before the midterms in November. I am also in the process of transitioning from using the fast.ai library to pure PyTorch to reduce the number of layers of abstraction in my code, as this will make for easier debugging. My next step is to build a usable web application that  updates live with new polls released.
 
-## Methodology
+## Findings
+
+The partisan lean [^2] of the state in which each election took place appears to be by far the most important factor in my model's predictions.
+
+<p align="center">
+  <img width="700" src="https://user-images.githubusercontent.com/98286463/183303381-67197ace-3ec7-4448-977c-3c4b11d477ec.png">
+</p>
+
+## Methodology Notes
 
 Ideology scores used are from Adam Bonica’s 2014 Paper “Mapping The Ideological Marketplace.” Rather than base ideology on votes once elected to Congress, which precludes having scores for any non-incumbents, Bonica’s “CF Score” is a metric based on the ideology of a candidate’s financial contributors. Using collaborative filtering, one can identify donors that tend to donate to candidates of certain ideologies, and infer the ideologies of candidates who receive money from the same donors.
 
-In addition to the partisan lean of each state (how much more Republican does it vote than the nation as a whole in a weighted combination of the last two presidential elections), I included the states themselves as categorical variables in my models, after ensuring that they were neither polluting the analysis nor an insignificant factor. I hypothesize that this is because some states, particularly small ones, can be quite politically idiosyncratic.
+In addition to the partisan lean [^2] of each state, I included the states themselves as categorical variables in my models, after ensuring that they were neither polluting the analysis nor an insignificant factor. I hypothesize that this is because some states, particularly small ones, can be quite politically idiosyncratic.
 
 When building my datasets, I exclude special elections, jungle primaries included in the source data, and Democrat vs Democrat or Republican vs Republican elections included in the source data that are the result of jungle primaries earlier in that year.
 
 [^1]: I use two-party vote share, in which I divide the votes for the Republican by (votes for Repub + votes for Democrat)
+[^2]: how much more Republican does it vote than the nation as a whole, in a weighted combination of the last two presidential elections
