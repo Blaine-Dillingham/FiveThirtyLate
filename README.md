@@ -8,7 +8,7 @@ I trained several models to predict the percent of the vote won by the Republica
   <img width="700" src="https://user-images.githubusercontent.com/98286463/183139138-9c510cf5-3290-4477-be9e-b9bb5aa69abe.png">
 </p>
 
-I trained decision trees, random forests, and neural networks on Senate elections in the years 2000-2010, and used the 2012 elections as a validation to experiment with the performance of different hyperparameters. I then built a test set of Senate elections in 2016-2020 to evaluate the final performance of these models. Using an ensemble of the best-performing random forest and neural network, I was able to predict unseen data points within 8%, on average, which is comparabe to the true margin of error on many polls.
+I trained decision trees, random forests, and neural networks on Senate elections in the years 2000-2010, and used the 2012 elections as a validation to experiment with the performance of different hyperparameters. I then built a test set of Senate elections in 2016-2020 to evaluate the final performance of these models. **Using an ensemble of the best-performing random forest and neural network, I was able to predict unseen data points within 8%, on average, which is comparabe to the true margin of error on many polls.**
                                                                                                                                 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/98286463/183137918-4f5b7c14-2cb1-467b-97ab-9fe34c9d1c0f.png" width="700" />
