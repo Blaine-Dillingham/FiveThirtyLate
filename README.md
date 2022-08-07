@@ -1,14 +1,16 @@
 # FiveThirtyLate
 
-An avid reader of the elections forecasting website FiveThirtyEight, I sought to explore whether I could achieve comparable performance at predicting US elections by using machine learning to find previously undiscovered patterns, rather than manually weighting different factors in a probabilistic model as FiveThirtyEight does.
+An avid reader of the elections forecasting website FiveThirtyEight, I sought to explore whether I could achieve comparable performance at predicting US elections by using machine learning to find previously undiscovered patterns, rather than manually weighting different factors in a probabilistic model as FiveThirtyEight does. 
 
-I trained several models to predict the percent of the vote won by the Republican [^1] in US Senate Elections given the ideology of each candidate, the partisan lean of the state they’re running in, the national partisan environment (think 2018’s “Blue Wave”), and national economic indicators. I assembled the training data from several different publicly available datasets of over 10 million entries. 
+TL;DR: **By Ensembling my best neural network with a random forest, I was able to reduce the error of my model by 33% and achieve results comparabe to the true margin of error on many polls.** 
+
+I trained several models to predict the percent of the vote won by the Republican [^1] in US Senate Elections given the ideology of each candidate, the partisan lean of the state they’re running in, the national partisan environment (think 2018’s “Blue Wave”), and national economic indicators. I assembled the training data from several different publicly available datasets of over 10 million entries. Below is a snapshot of the custom dataset I built.
 
 <p align="center">
   <img width="700" src="https://user-images.githubusercontent.com/98286463/183139138-9c510cf5-3290-4477-be9e-b9bb5aa69abe.png">
 </p>
 
-I trained decision trees, random forests, and neural networks on Senate elections in the years 2000-2010, and used the 2012 elections as a validation to experiment with the performance of different hyperparameters. I then built a test set of Senate elections in 2016-2020 to evaluate the final performance of these models. **Using an ensemble of the best-performing random forest and neural network, I was able to predict unseen data points within 8%, on average, which is comparabe to the true margin of error on many polls.**
+I trained decision trees, random forests, and neural networks on Senate elections in the years 2000-2010, and used the 2012 elections as a validation to experiment with the performance of different hyperparameters. I then built a test set of Senate elections in 2016-2020 to evaluate the final performance of these models. Using an ensemble of the best-performing random forest and neural network, I was able to predict unseen data points within 8%, on average, which is comparabe to the true margin of error on many polls.
                                                                                                                                 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/98286463/183137918-4f5b7c14-2cb1-467b-97ab-9fe34c9d1c0f.png" width="700" />
