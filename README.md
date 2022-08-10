@@ -2,7 +2,7 @@
 
 An avid reader of the elections forecasting website FiveThirtyEight, I sought to explore whether I could achieve comparable performance at predicting US elections by using machine learning to find previously undiscovered patterns, rather than manually weighting different factors in a probabilistic model as FiveThirtyEight does. 
 
-TL;DR: **By Ensembling my best neural network with a random forest, I was able to reduce the error of my model by 33% and achieve results comparabe to the true margin of error on many polls.** 
+TL;DR: **By ensembling my best neural network with a random forest, I was able to reduce the error of my model by 33% and achieve results comparabe to the true margin of error on many polls.** 
 
 I trained several models to predict the percent of the vote won by the Republican [^1] in US Senate Elections given the ideology of each candidate, the partisan lean of the state they’re running in, the national partisan environment (think 2018’s “Blue Wave”), and national economic indicators. I assembled the training data from several different publicly available datasets of over 10 million entries. Below is a snapshot of the custom dataset I built.
 
